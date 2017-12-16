@@ -1,0 +1,16 @@
+(define (square x)
+        (* x x))
+
+(define (sumOfSquares a b)
+        (+ (square a) (square b)))
+
+(define (largestOf a b)
+        (if (> a b) a b))
+
+
+(define (sumOfSquaresOfLargestTwo a b c)
+        (sumOfSquares (largestOf a b) (largestOf b c)))
+
+
+(display (sumOfSquaresOfLargestTwo 3 4 5)) ;test .Should print 41
+	
