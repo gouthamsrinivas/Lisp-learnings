@@ -24,9 +24,12 @@ First evaluate the operands and operator
 (sumOfSquares (+a 1)(*a 2)        
 (sumOfSquares (+ 2 1) (* 2 2))       ;Keep expanding .Dont evaluate till the end
 (+ (square (+ 2 1) (+square (* 2 2)) ;Keep expanding .Dont evaluate till the end
-(+ (* (+ 2 1) (+ 2 1)) (*  (* 2 2) (* 2 2)))  ; Fully expanded
-(+ (* 3 3) (* 4 4))
+(+ (* (+ 2 1) (+ 2 1)) (*  (* 2 2) (* 2 2)))  ; Fully expanded 
+(+ (* 3 3) (* 4 4))         ; Also note we have to compute some expressions(2+1) twice in previous line 
 (+ 9 16)
 25
+
+
+LISP uses APPLICATIVE ORDER evaluation (one of the advantages is it avoids double computations )
 
 |#
